@@ -85,7 +85,7 @@ input[type="text"],#pass,#cpass,input[type="phone"],input[type="email"]{
 .rem{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 45%;
+    margin-top: 1%;
     margin-left: 30%;
     width: 55%;
     /* position: absolute;
@@ -98,7 +98,8 @@ input[type="text"],#pass,#cpass,input[type="phone"],input[type="email"]{
     width: 60%;
     height: 20%;
     padding: 1em 0em;
-    margin-left: 16em;
+    margin-left: 12em;
+    margin-top: 45%;
     background-color: blue;
     border-radius: 5px ;
     cursor: pointer;
@@ -108,8 +109,8 @@ input[type="text"],#pass,#cpass,input[type="phone"],input[type="email"]{
     width: 60%;
     height: 20%;
     padding: .5em 0em;
-    margin-left: 16em;
-    margin-top: 7px;
+    margin-left: 12em;
+    margin-top: 1px;
     background-color: #fff;
     outline: none;
     border-radius: 5px ;
@@ -147,4 +148,9 @@ input[type="text"],#pass,#cpass,input[type="phone"],input[type="email"]{
     display: flex;
     flex-wrap: wrap;
 }
-
+/* .info input[type="email"] span{
+    display: none;
+} */
+.e{
+    display: none;
+}
