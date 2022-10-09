@@ -21,53 +21,58 @@ function validate() {
     var user3 = document.getElementById("pass");
     var entry = document.getElementById("cpass").value;
     var entry1 = document.getElementById("cpass");
-    var re = /^[a-zA-Z]/;
+    var re = /^[a-zA-Z ]/;
     console.log(email);
     var reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var password = /^(?=,*[0-9])(?=,*[!@#$%^&*])[a-zA-Z0-9]{8,16}$/;
     if (re.test(user)) {
         alert("done");
         console.log(user);
+        user1.style.border = "green solid 3px"
+        document.getElementById('sp').style.display = 'none' ;
         return true;
     }
     else {
          user1.style.border = "red solid 3px"
-         document.getElementById('spa').style.display = 'block' 
+         document.getElementById('sp').style.display = 'block' ;
         return false;}
         //email
-     if (re.test(email)) {
-        alert("done");
-        return true;
-             }
-        else {
-             email2.style.border = "red solid 3px";
-             return false;
-             }
-            //password
-        if (password.test(user2))
-            {
-            alert("done");
-            console.log(user3);
-            return true;
-             }
-             else 
+         if (re.test(email)) {
+         alert("done");
+         return true;
+              }
+         else {
+              email2.style.border = "red solid 3px";
+              return false;
+              }
+             //password
+         if (password.test(user2))
+          {
+             alert("done");
+             console.log(user3);
+             return true;
+              }
+              else 
+              {
+                 user3.style.border = "red solid 3px"
+                 document.getElementById('spa1').style.display = 'block' 
+                 return false;}
+             //confirm password
+             if (password.match(entry))
              {
-                user3.style.border = "red solid 3px"
-                document.getElementById('spa1').style.display = 'block' 
-                return false;}
-            //confirm password
-            if (password.match(entry))
-            {
-            alert("done");
-            console.log(user3);
-            return true;
-             }
-             else 
-             {
-                user3.style.border = "red solid 3px"
-                document.getElementById('spa1').style.display = 'block' 
-                return false;}
-        
+             alert("done");
+             console.log(user3);
+             return true;
+              }
+              else 
+              {
+                 user3.style.border = "red solid 3px"
+                 document.getElementById('spa1').style.display = 'block' 
+                 return false;} 
+    };
+    function check()
+    {
+        document.getElementById("male").reset();    
     };
     
 
