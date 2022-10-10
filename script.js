@@ -73,22 +73,9 @@ function validate() {
                   document.getElementById('spa1').style.display = 'block' 
                  return false;} 
     };
-    //  function check()
-    // {
-    //     document.getElementById("male").reset();    
-    // };
-    
-// timeout before a callback is called
-
 let timeout;
-
-// traversing the DOM and getting the input and span using their IDs
-
-let password = document.getElementById('PassEntry')
-let strengthBadge = document.getElementById('StrengthDisp')
-
-// The strong and weak password Regex pattern checker
-
+let password = document.getElementById('Pass')
+let strength = document.getElementById('Strength')
 let strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})')
 let mediumPassword = new RegExp('((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{6,}))|((?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?=.{8,}))')
 
@@ -96,19 +83,19 @@ function StrengthChecker(PasswordParameter){
     // We then change the badge's color and text based on the password strength
 
     if(strongPassword.test(PasswordParameter)) {
-        strengthBadge.style.backgroundColor = "green"
-        strengthBadge.textContent = 'Strong'
+        strength.style.backgroundColor = "green"
+        strength.textContent = 'Strong'
     } else if(mediumPassword.test(PasswordParameter)){
-        strengthBadge.style.backgroundColor = 'blue'
-        strengthBadge.textContent = 'Medium'
+        strength.style.backgroundColor = 'blue'
+        strength.textContent = 'Medium'
     } else{
-        strengthBadge.style.backgroundColor = 'red'
-        strengthBadge.textContent = 'Weak'
+        strength.style.backgroundColor = 'red'
+        strength.textContent = 'Weak'
     }
 
 }
 password.addEventListener("input", () => {
-    strengthBadge.style.display= 'block'
+    strength.style.display= 'block'
     clearTimeout(timeout);
     timeout = setTimeout(() => StrengthChecker(password.value), 500);
     if(password.value.length !== 0){

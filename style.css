@@ -64,7 +64,7 @@ body{
     align-items: center;
     gap: 10px;
 }
-input[type="text"],#PassEntry,#cpass,input[type="phone"],input[type="email"]{
+input[type="text"],#Pass,#cpass,input[type="phone"],input[type="email"]{
     padding: .5em;
     width: 20em;
     cursor: pointer;
