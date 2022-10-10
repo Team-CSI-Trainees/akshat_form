@@ -64,7 +64,7 @@ body{
     align-items: center;
     gap: 10px;
 }
-input[type="text"],#pass,#cpass,input[type="phone"],input[type="email"]{
+input[type="text"],#PassEntry,#cpass,input[type="phone"],input[type="email"]{
     padding: .5em;
     width: 20em;
     cursor: pointer;
@@ -100,7 +100,7 @@ input[type="email"],input[type="phone"],input[type="text"]:focus:invalid{
     display: flex;
     flex-wrap: wrap;
     margin-top: 1%;
-    margin-left: 5%;
+    margin-left: 30%;
     width: 65%;
     /* position: absolute;
     top: 70%; */

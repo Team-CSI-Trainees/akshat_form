@@ -45,7 +45,7 @@
 
                 </fieldset>
                 <div class="info"><input type="phone" id="phone" placeholder="Phone Number"><br></div>
-                <div class="info"><input type="email" id="email" placeholder="Email"><span class="spa1" style="display: none;">ERROR</span><br></div>
+                <div class="info"><input type="email" id="email" placeholder="Email"><span class="spa1" style="display: none;">Invalid Email</span><br></div>
                 <div class="drop"><p>Branch:-</p>
                     <select name="Branch">
                     <option value="CSE">CSE<i class="fa-solid fa-computer"></i></option>
@@ -53,7 +53,7 @@
                     <option value="ECE">ECE<i class="fa-solid fa-computer"></i></option>
                     
                 </select></div>
-                 <div class="info"><input type="password" id="pass" placeholder="Password"><br></div>
+                 <div class="info"><input type="password" id="PassEntry" placeholder="Password"><br><span id="StrengthDisp" class="badge displayBadge" style="display: none;">Weak</span></div>
                 <div class="info"><input type="password" id="cpass" placeholder="Confirm Password"></div>
                 <input type="submit" class="button1"  onclick="validate()" value="SUBMIT"><br>
                 
