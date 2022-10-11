@@ -180,6 +180,9 @@ input[type="email"],input[type="phone"],input[type="text"]:focus:invalid{
   }
   .contact h1{
    top: 15%;}
+   .f1{
+    left: 10%;
+   }
 }
 .alert{
     z-index: 1;
