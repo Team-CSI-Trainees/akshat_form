@@ -57,7 +57,7 @@ body{
 .f1{
     position:absolute;
     top: 24%;
-    left: 30%;
+    left: 25%;
 }
 .info{
     display: flex;
@@ -175,6 +175,11 @@ input[type="email"],input[type="phone"],input[type="text"]:focus:invalid{
     display: none;
     
   }
+  .hello h2{
+    display:none;
+  }
+  .contact h1{
+   top: 15%;}
 }
 .alert{
     z-index: 1;
