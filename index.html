@@ -31,6 +31,8 @@
             </section>
             <form class="form" target ="_blank" action="index.html" method="post">
                 <div class="f1">
+                    <fieldset id="fs1">
+                        <legend id="le">Register with us</legend>
              <div class="na"> <div class="info"><input type="text" id="fname" placeholder="Name" ><div id="sp" style="display: none; color:red;">Error</div></div></div>
                 <fieldset id="fs">
                     <legend>Gender</legend>
@@ -69,13 +71,14 @@
                     <div class="sign">Don't have account?<a href="#">Sign Up</a></div>
                 </div>
             </div>
+        </fieldset>
             </form>
-            <div class="alert"  id="alert1" style="display: none;">
-                <span>Form not submitted</span>
+            <div class="alert"  id="alert" style="display: none;">
+               <center <span>Form not submitted</span></center>
                 <input type="button" id="btn2" value="OK" onclick="reset1()">
 
             </div>
-            <div class="alert1" id="alert" style="display: none;" >
+            <div class="alert1" id="alert1" style="display: none;" >
               <center><span >Succesfully submitted</span></center>  
                 <input type="button" id="btn1" value="OK" onclick="reset()">
             </div>

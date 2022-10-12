@@ -15,12 +15,10 @@ function validate() {
     var phone1 = document.getElementById('phone')
      var rege = /^[0-9]{10}/
     var re = /^[a-zA-Z ]/;
-    console.log(email);
     var reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
      var password =/^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$/;
  if (re.test(user) ) {
     //  alert("done");
-         console.log(user);
          user1.style.border = "green solid 3px"
          document.getElementById('sp').style.display = 'none' ;     }
      else {
@@ -30,7 +28,6 @@ function validate() {
            }
  if (reg.test(email) ) {
     //  alert("done");
-         console.log(user);
          email2.style.border = "green solid 3px"
          spa1.style.display = 'none' ;
      }
@@ -41,7 +38,6 @@ function validate() {
            }
  if (rege.test(phone) ) {
     //  alert("done");
-         console.log(user);
          phone1.style.border = "green solid 3px"
 
          document.getElementById('sp2').style.display = 'none' ;
@@ -55,11 +51,23 @@ function validate() {
     {
         document.getElementById("fs").style.border = "green solid 3px";
     }
-    else
+    else{
     document.getElementById("fs").style.border = "red solid 3px";
-    if(passwo === entry)
+    r++;}
+    if(password.test(passwo))
+    {
+        passwor.style.border = "green solid 3px"
+
+        document.getElementById('sp2').style.display = 'none' ;
+    }
+    else {
+        passwor.style.border = "red solid 3px"
+         r++;
+    }
+    if(passwo == entry)
     {
         entry1.style.border == "green solid 3px";
+        console.log("kehjh")
     }
     else
         entry1.style.border == "red solid 3px"
@@ -68,14 +76,20 @@ function validate() {
         };
         function checkbox()
         {
-           if(r==3 || r==2 || r==1 )
+           if(r==3 || r==2 || r==1 || r==4 || r==5)
            {
-            document.getElementById("alert1").style.display = "block"
+            document.getElementById("alert").style.display = "block"
          //   alert("done")
            }
            else
            {
-            document.getElementById("alert").style.display = "block"
+            var user = document.getElementById("fname").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById('phone').value;
+            document.getElementById("alert1").style.display = "block"
+            console.log(user)
+            console.log(email)
+            console.log(phone)
            }
         };
     
@@ -113,9 +127,9 @@ password.addEventListener("input", () => {
 });
 function reset()
 {
-    document.getElementById("alert").style.display ="none"
+    document.getElementById("alert1").style.display ="none"
 
 };
 function reset1()
-{document.getElementById("alert1").style.display ="none"};
+{document.getElementById("alert").style.display ="none"};
 
