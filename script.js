@@ -2,6 +2,8 @@ var email = document.getElementById("email").value;
 var reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 var r = 0;
 function validate() {
+    var branch =document.getElementById("branchName")
+    var branchVal =document.getElementById("branchName").value
     var user = document.getElementById("fname").value;
     var spa1  = document.getElementById('sp1')
     var user1 = document.getElementById("fname");
@@ -14,18 +16,23 @@ function validate() {
     var phone = document.getElementById('phone').value
     var phone1 = document.getElementById('phone')
      var rege = /^[0-9]{10}/
-    var re = /^[a-zA-Z ]/;
+    var re = /^[a-zA-Z]/;
     var reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-     var password =/^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$/;
+     var password =/(?=^.{6,}$)(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[^A-Za-z0-9]).*/;
  if (re.test(user) ) {
     //  alert("done");
          user1.style.border = "green solid 3px"
          document.getElementById('sp').style.display = 'none' ;     }
-     else {
+     else if(user == " "){
           user1.style.border = "red solid 3px"
           document.getElementById('sp').style.display = 'block' ;
           r++;
            }
+    else{
+        user1.style.border = "red solid 3px"
+        document.getElementById('sp').style.display = 'block' ;
+        r++;
+    }
  if (reg.test(email) ) {
     //  alert("done");
          email2.style.border = "green solid 3px"
@@ -56,40 +63,48 @@ function validate() {
     r++;}
     if(password.test(passwo))
     {
-        passwor.style.border = "green solid 3px"
-
+       // passwor.style.border = "green solid 3px"
         document.getElementById('sp2').style.display = 'none' ;
+        if(entry != passwo)
+        {
+            entry1.style.border = "red solid 3px"
+            r++
+        }
+        else
+           { entry1.style.border = "green solid 3px"
+               }
     }
     else {
         passwor.style.border = "red solid 3px"
          r++;
     }
-    if(passwo == entry)
+    if(branchVal == "0")
     {
-        entry1.style.border == "green solid 3px";
-        console.log("kehjh")
+        document.getElementById("branchError").style.display= "block"
     }
-    else
-        entry1.style.border == "red solid 3px"
+    else{
+        document.getElementById("branchError").style.display= "none"
 
-           return checkbox()
+    }
+    
+           return checkbox();
         };
         function checkbox()
         {
-           if(r==3 || r==2 || r==1 || r==4 || r==5)
+           if(r>=1)
            {
             document.getElementById("alert").style.display = "block"
          //   alert("done")
            }
            else
            {
-            var user = document.getElementById("fname").value;
-            var email = document.getElementById("email").value;
-            var phone = document.getElementById('phone').value;
+            // var user = document.getElementById("fname").value;
+            // var email = document.getElementById("email").value;
+            // var phone = document.getElementById('phone').value;
             document.getElementById("alert1").style.display = "block"
-            console.log(user)
-            console.log(email)
-            console.log(phone)
+            // console.log(user)
+            // console.log(email)
+            // console.log(phone)
            }
         };
     
@@ -132,4 +147,3 @@ function reset()
 };
 function reset1()
 {document.getElementById("alert").style.display ="none"};
-
